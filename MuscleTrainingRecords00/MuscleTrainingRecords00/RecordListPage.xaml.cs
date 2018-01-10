@@ -19,10 +19,10 @@ namespace MuscleTrainingRecords00
             //Userテーブルの行データを取得
             var query = RecordsModel.SelectRecords(); //中身はSELECT * FROM [Records]
             var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
-            foreach (var user in query)
+            foreach (var records in query)
             {
                 //Userテーブルの名前列をLabelに書き出す
-                layout.Children.Add(new Label { Text = user.M_weight });
+                layout.Children.Add(new Label { Text = records.M_weight });
             }
         }
         private void RecordListButton(object sender, EventArgs e)
