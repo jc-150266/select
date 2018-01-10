@@ -48,7 +48,7 @@ namespace MuscleTrainingRecords00
         }
 
         /*******************セレクトメソッド**************************************/
-        public static List<RecordsModel> SelectFood()
+        public static List<RecordsModel> SelectRecords()
         {
             using (SQLiteConnection db = new SQLiteConnection(App.dbPath))
             {

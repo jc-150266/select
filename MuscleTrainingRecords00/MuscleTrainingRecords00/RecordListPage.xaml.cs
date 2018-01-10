@@ -15,20 +15,15 @@ namespace MuscleTrainingRecords00
         public RecordListPage()
         {
             InitializeComponent();
-            /*var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
-            //Userテーブルに適当なデータを追加
-            MuscleMenuModelCS.insertUser("鈴木");
-            MuscleMenuModelCS.insertUser("田中");
-            MuscleMenuModelCS.insertUser("斎藤");
+
             //Userテーブルの行データを取得
-            var query = MuscleMenuModelCS.selectUser();
-            foreach (var Memo in query)
+            var query = RecordsModel.SelectRecords(); //中身はSELECT * FROM [Records]
+            var layout = new StackLayout { HorizontalOptions = LayoutOptions.Center, Margin = new Thickness { Top = 100 } };
+            foreach (var user in query)
             {
-                //Userテーブルの名前列をLabelに書き出します
-                layout.Children.Add(new Label { Text = Memo.Name });
+                //Userテーブルの名前列をLabelに書き出す
+                layout.Children.Add(new Label { Text = user.M_weight });
             }
-            Content = layout;
-        }*/
         }
         private void RecordListButton(object sender, EventArgs e)
         {
